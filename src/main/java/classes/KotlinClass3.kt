@@ -21,3 +21,15 @@ abstract class Base2 :Base1() {
         super.f()
     }
 }
+
+class MySimpleClass(var name:String, var age:Int) {
+    fun greeting():Unit = println("Hello my name is $name, and i'm $age old.")
+}
+
+fun main(args: Array<String>) {
+    val clazz = MySimpleClass("Alex", 31)
+    clazz.greeting()
+    clazz.name = "Katrine"
+    clazz.age = 25
+    clazz.greeting()
+}
